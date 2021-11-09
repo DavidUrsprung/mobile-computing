@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  numberguess
+//  Hello world
 //
-//  Created by Ursprung David on 09.11.21.
+//  Created by Pouget Marcel on 21.09.21.
 //
 
 import UIKit
 
-@main
+			@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
