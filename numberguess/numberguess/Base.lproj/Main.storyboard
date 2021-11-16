@@ -37,6 +37,7 @@
                                 <state key="normal" title="Guess"/>
                                 <connections>
                                     <action selector="ontouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epo-aO-6SA"/>
+                                    <segue destination="qSo-LI-EWt" kind="show" id="WHU-Uc-BKy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-mN-s8d">
@@ -66,8 +67,8 @@
                                     <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="brA-5N-6oP"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="45088086-940Smiley_Harmonie_Thinkstock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2M-A7-QWs">
-                                <rect key="frame" x="155" y="-1" width="104" height="898"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="45088086-940Smiley_Harmonie_Thinkstock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2M-A7-QWs">
+                                <rect key="frame" x="155" y="-180" width="104" height="898"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,6 +123,9 @@
             <point key="canvasLocation" x="926" y="96"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WHU-Uc-BKy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="45088086-940Smiley_Harmonie_Thinkstock.jpg" width="703.5" height="673.5"/>
         <systemColor name="systemBackgroundColor">

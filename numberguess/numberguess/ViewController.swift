@@ -42,6 +42,9 @@ class ViewController: UIViewController {
         print("erraten: \(gameLogik.numberToGuess)")
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return gameLogik.evaluate(string: texfield.text!) == 0;
+    }
 
     @IBAction func ontouchUpInside(_ sender: UIButton) {
         
