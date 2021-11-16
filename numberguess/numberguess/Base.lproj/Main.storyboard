@@ -67,7 +67,7 @@
                                 </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="45088086-940Smiley_Harmonie_Thinkstock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2M-A7-QWs">
-                                <rect key="frame" x="155" y="111.5" width="104" height="673.5"/>
+                                <rect key="frame" x="155" y="-1" width="104" height="898"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
