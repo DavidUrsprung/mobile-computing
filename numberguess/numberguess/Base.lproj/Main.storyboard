@@ -34,7 +34,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-e5-kRM">
                                 <rect key="frame" x="185.5" y="433" width="43" height="30"/>
-                                <state key="normal" title="Guess"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ontouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epo-aO-6SA"/>
                                     <segue destination="qSo-LI-EWt" kind="show" id="WHU-Uc-BKy"/>
@@ -67,9 +69,6 @@
                                     <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="brA-5N-6oP"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="45088086-940Smiley_Harmonie_Thinkstock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2M-A7-QWs">
-                                <rect key="frame" x="155" y="-180" width="104" height="898"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,17 +77,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MJQ-OW-ZmS" secondAttribute="trailing" constant="20" id="6e2-NK-ti0"/>
                             <constraint firstItem="w1u-nf-wdS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BHc-6n-OTA"/>
                             <constraint firstItem="w1u-nf-wdS" firstAttribute="top" secondItem="MJQ-OW-ZmS" secondAttribute="bottom" constant="18" id="EBJ-h9-1h4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t2M-A7-QWs" secondAttribute="trailing" constant="155" id="HDd-vc-k4W"/>
                             <constraint firstItem="Gdr-mN-s8d" firstAttribute="top" secondItem="uNh-e5-kRM" secondAttribute="bottom" constant="22.5" id="Uza-kg-79M"/>
                             <constraint firstItem="Gdr-mN-s8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyy-XD-6Xq"/>
                             <constraint firstItem="MJQ-OW-ZmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b5A-LK-pm3"/>
                             <constraint firstItem="WsM-Pw-DKh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="cJm-5N-xk6"/>
-                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1v-Pe-Xfq"/>
                             <constraint firstItem="MJQ-OW-ZmS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hUY-Cb-xsE"/>
                             <constraint firstItem="uNh-e5-kRM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m3c-C9-b2t"/>
                             <constraint firstItem="uNh-e5-kRM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oS2-ei-ckh"/>
                             <constraint firstItem="w1u-nf-wdS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rT5-Y2-say"/>
-                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rxE-XH-hPW"/>
                             <constraint firstItem="WsM-Pw-DKh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="sqv-tE-HCK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w1u-nf-wdS" secondAttribute="trailing" constant="20" id="tHP-Zm-eoO"/>
                         </constraints>
@@ -106,21 +102,44 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--ResultViewController-->
         <scene sceneID="ZPD-yg-IRT">
             <objects>
-                <viewController id="qSo-LI-EWt" sceneMemberID="viewController">
+                <viewController title="ResultViewController" id="qSo-LI-EWt" customClass="ResultViewController" customModule="numberguess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PtB-Oj-Wz6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Box-vV-8oW">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="45088086-940Smiley_Harmonie_Thinkstock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t2M-A7-QWs">
+                                <rect key="frame" x="123" y="198" width="168" height="165"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C0E-Fo-aGC"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerY" secondItem="PtB-Oj-Wz6" secondAttribute="centerY" constant="-174" id="4gL-hV-9yh"/>
+                            <constraint firstItem="Box-vV-8oW" firstAttribute="centerY" secondItem="PtB-Oj-Wz6" secondAttribute="centerY" id="8wP-Wm-aMZ"/>
+                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerX" secondItem="PtB-Oj-Wz6" secondAttribute="centerX" id="Aoo-pt-ndd"/>
+                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerY" secondItem="PtB-Oj-Wz6" secondAttribute="centerY" id="Fp7-Db-UGM"/>
+                            <constraint firstItem="t2M-A7-QWs" firstAttribute="centerX" secondItem="PtB-Oj-Wz6" secondAttribute="centerX" id="kDU-h6-IC2"/>
+                            <constraint firstItem="Box-vV-8oW" firstAttribute="centerX" secondItem="PtB-Oj-Wz6" secondAttribute="centerX" id="p1L-f4-cYK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OUZ-mn-Cax"/>
+                    <connections>
+                        <outlet property="emoji" destination="t2M-A7-QWs" id="hs6-b6-AmG"/>
+                        <outlet property="labelGratulation" destination="Box-vV-8oW" id="gIN-g3-ah9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9u-hR-oja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="96"/>
+            <point key="canvasLocation" x="924.63768115942037" y="95.758928571428569"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -128,11 +147,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="45088086-940Smiley_Harmonie_Thinkstock.jpg" width="703.5" height="673.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

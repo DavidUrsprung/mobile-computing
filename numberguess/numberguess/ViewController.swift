@@ -4,7 +4,6 @@ class ViewController: UIViewController {
     
     var gameLogik = GameLogik()
     
-    
     @IBOutlet weak var texfield: UITextField!
     @IBOutlet weak var message: UILabel!
     //let number = 0
@@ -12,8 +11,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var guessmeButton: UIButton!
     
     @IBOutlet weak var trys: UILabel!
-    
-    @IBOutlet weak var emoji: UIImageView!
     
     
     @IBAction func editingChanged(_ sender: UITextField) {
@@ -29,16 +26,12 @@ class ViewController: UIViewController {
         guessmeButton.isEnabled = gameLogik.isvalidguess(string: sender.text)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        emoji.isHidden = true
         //guessmeButton.isEnabled = false
         
         gameLogik.startNewGame()
         
-         
         print("erraten: \(gameLogik.numberToGuess)")
     }
     
@@ -48,7 +41,6 @@ class ViewController: UIViewController {
 
     @IBAction func ontouchUpInside(_ sender: UIButton) {
         
-     
         var outputText: String!
         
         if let guess = texfield.text {
@@ -62,23 +54,19 @@ class ViewController: UIViewController {
                 outputText = "Zu klein!"
             default:
                 outputText = "Erraten!"
-                emoji.isHidden = false
             }
         }
         
-        
-        
-        
         message.text = outputText
-        
         gameLogik.numberOfGuesses += 1
         trys.text = "Anzahl der Versuche: \(gameLogik.numberOfGuesses)"
-        
-        	
     }
     
-    
-    
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare")
+        
+        let resultViewController = segue.destination as? ResultViewController
+        resultViewController?.gamelogik = gameLogik
+    }
+       
 }
-
