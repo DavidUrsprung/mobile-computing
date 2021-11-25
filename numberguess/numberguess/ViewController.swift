@@ -22,8 +22,9 @@ class ViewController: UIViewController {
             guessmeButton.isEnabled = false
         }
         */
-        
-        guessmeButton.isEnabled = gameLogik.isvalidguess(string: sender.text)
+        let enabled = gameLogik.isvalidguess(string: sender.text)
+        print("Button is enabled \(enabled)")
+        guessmeButton.isEnabled = enabled
     }
     
     override func viewDidLoad() {

@@ -11,6 +11,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var labelGratulation: UILabel!
     
+    
     @IBOutlet weak var emoji: UIImageView!
     
     var gamelogik:GameLogik?
